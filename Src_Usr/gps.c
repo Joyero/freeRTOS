@@ -844,6 +844,26 @@ static portBASE_TYPE xHigherPriorityTaskWoken;
 }
 
 
+
+void CodigoCheck()
+{
+    int i = 50;
+    if (i<50)
+    {
+        portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+    }
+
+    if (i<50)
+    {
+        portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+    }
+    if (i>50)
+    {
+      (pRxData = '\n';
+    }
+}
+
+
 /* USER CODE BEGIN Header_StartTaskGPS */
 /**
   * @brief  Function implementing the GPSTask thread.
